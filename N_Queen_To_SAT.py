@@ -13,23 +13,19 @@ def main():
 	else:
 		N = int(sys.argv[1])
 
-	counter = (N * (N - 1) * (5 * N - 1)) / 3
-	counter += N
 
 	# Printing the File header in the DIMACS CNF Format
 	file.write("c N-Queen to SAT converter\n")
-	file.write("c Under the guidance of D. Mitra Sir\n")
-	file.write("p cnf {0:d} {1:d}\n".format((N * N), int(counter)))
 
 	printRowClauses(N)
 	printColClauses(N)
 	printDiagClauses(N)
 
 	file.close()
-
+	# Minisat INPUT OUTPUT
 	subprocess.call(['minisat', 'N_Queen_To_SAT.cnf', 'N_Queen_To_SAT.sol'])
 
-	if N <= 20:
+	if N <= 40:
 		displayGUI(N)
 	else:
 		displayNonGUI(N)
@@ -44,7 +40,6 @@ def printRowClauses(N):
 		file.write("{0:d} ".format(i))
 		if i % N == 0:
 			file.write("0\n")
-			
 
 	# loop to go through all the squares of the board
 	for i in range(1, lim):

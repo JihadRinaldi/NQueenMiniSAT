@@ -16,4 +16,8 @@
 3. GUI will show the Queen Position (`RED COLOR`)
 
 # Input Format
-`Int`
+N Board Size `Int` 
+
+# Output Format
+Visualisasi N Queen Problem
+![alt text](https://i.imgur.com/g6py8MQ.png)
