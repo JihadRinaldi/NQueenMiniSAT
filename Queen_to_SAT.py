@@ -1,9 +1,9 @@
 from math import ceil
-from displaySol import displayGUI, displayNonGUI
+from Generate_GUI import displayGUI, displayNonGUI
 import sys
 import subprocess
 
-file = open("N_Queen_To_SAT.cnf", mode='w')
+file = open("Queen_to_SAT.cnf", mode='w')
 
 def main():
 	global file
@@ -23,7 +23,7 @@ def main():
 
 	file.close()
 	# Minisat INPUT OUTPUT
-	subprocess.call(['minisat', 'N_Queen_To_SAT.cnf', 'N_Queen_To_SAT.sol'])
+	subprocess.call(['minisat', 'Queen_to_SAT.cnf', 'Queen_to_SAT.sol'])
 
 	if N <= 40:
 		displayGUI(N)

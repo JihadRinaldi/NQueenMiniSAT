@@ -14,7 +14,7 @@ def displayGUI(N):
 
 	colour = colour1
 
-	with open('N_Queen_To_SAT.sol', mode='r') as f:
+	with open('Queen_to_SAT.sol', mode='r') as f:
 		content = f.read().splitlines()
 	f.close()
 
@@ -53,7 +53,7 @@ def displayGUI(N):
 
 def displayNonGUI(N):
 
-	with open('N_Queen_To_SAT.sol', mode='r') as f:
+	with open('Queen_to_SAT.sol', mode='r') as f:
 		content = f.read().splitlines()
 	f.close()
 
